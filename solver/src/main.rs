@@ -4,38 +4,6 @@ use std::fs::File;
 use std::cmp::Ordering;
 
 
-//sort strings into alphabetical order
-fn sort_str(x: &&str, y:&&str) -> Ordering {
-    for (ac,bc) in x.chars().zip(y.chars()) {
-        if ac > bc {
-            return Ordering::Greater;
-        } else if ac < bc {
-            return Ordering::Less;
-        }
-    }
-    if x.len() > y.len() {
-        Ordering::Greater
-    } else if x.len() < y.len() {
-        Ordering::Less
-    } else {
-        Ordering::Equal
-    }
-}
-#[test]
-fn test_sort_str() {
-    let mut x: Vec<&str> = vec!["aardvarks","aals","aardwolves", "bc","aa","aahed", "aah", "aas", "aahs"];
-    x.sort_by(sort_str);
-    assert_eq!(x[0], "aa");
-    assert_eq!(x[1], "aah");
-    assert_eq!(x[2], "aahed");
-    assert_eq!(x[3], "aahs");
-    assert_eq!(x[4], "aals");
-    assert_eq!(x[5], "aardvarks");
-    assert_eq!(x[6], "aardwolves");
-    assert_eq!(x[7], "aas");
-    assert_eq!(x[8], "bc");
-}
-
 fn continuation(new: &str, old: &str) -> bool {
     (new.len() == (old.len() + 1))
     &&
