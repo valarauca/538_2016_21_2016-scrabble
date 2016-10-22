@@ -1,0 +1,6 @@
+[package]
+name = "solver"
+version = "0.1.0"
+authors = ["William Laeder <codylaeder@gmail.com>"]
+
+[dependencies]

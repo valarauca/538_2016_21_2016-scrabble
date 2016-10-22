@@ -1,0 +1,9 @@
+[package]
+name = "fivethirtyeight"
+version = "0.1.0"
+authors = ["Wlaeder"]
+
+[dependencies]
+hyper = {version = "0.9", default-features = false}
+regex = "0.1"
+lazy_static = "0.1"
